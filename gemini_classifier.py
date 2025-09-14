@@ -5,10 +5,13 @@ from typing import List
 import pandas as pd
 from tqdm import tqdm
 import google.generativeai as genai
+from dotenv import load_dotenv
+# Load environment variables from .env
+load_dotenv()
 
 # CONFIG
 
-GOOGLE_API_KEY = "AIzaSyBDfA2NfRysu8PQ7g1Vf0UELR8JDuPZjfI"  
+GOOGLE_API_KEY =os.getenv("GOOGLE_API_KEY")# ""  
 INPUT_JSON = "Data/sample_emails.json"
 OUTPUT_PREDICTIONS = "predictions.json"
 
