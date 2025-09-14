@@ -16,8 +16,8 @@ from datetime import datetime
 # CONFIG
 # ---------------------------
 PREDICTIONS_FILE = "predictions.json"
-MODEL_FILE = "model.pkl"
-DATA_FILE = "decisions_log.json"   # decision log file
+MODEL_FILE = "model/model.pkl"
+DATA_FILE = "logs/decisions_log.json"   # decision log file
 
 ACTIONS = [
     "Close Ticket",

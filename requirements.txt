@@ -1,3 +1,14 @@
+# Core ML + NLP
 pandas
 scikit-learn
-matplotlib
+tqdm
+joblib
+
+# LLM
+google-generativeai
+
+# Web UI
+streamlit
+
+# Optional
+python-dotenv

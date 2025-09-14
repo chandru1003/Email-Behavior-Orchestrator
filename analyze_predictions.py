@@ -7,7 +7,7 @@ from sklearn.linear_model import LogisticRegression
 from sklearn.pipeline import make_pipeline
 
 INPUT_FILE = "predictions.json"
-MODEL_FILE = "model.pkl"
+MODEL_FILE = "model/model.pkl"
 
 BEHAVIOR_TO_ACTION = {
     "Confirmation": "Close Ticket",
