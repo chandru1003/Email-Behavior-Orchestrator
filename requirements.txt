@@ -9,6 +9,3 @@ google-generativeai
 
 # Web UI
 streamlit
-
-# Optional
-python-dotenv
