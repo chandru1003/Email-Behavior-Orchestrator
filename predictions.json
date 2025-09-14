@@ -1,0 +1,702 @@
+[
+  {
+    "thread_id": 1,
+    "sender": "maria@vendor.com",
+    "email_text": "From: maria@vendor.com\nTo: reservations@company.com\nSubject: Service Booking Confirmed\n\nThank you for choosing our service. Your reservation is now confirmed.\nRegards,\nAdmin Team\n---\nFrom: reservations@company.com\nTo: maria@vendor.com\nSubject: Re: Service Booking Confirmed\n\nThank you for the update. We will take necessary action.\nBest regards,\nCustomer Service Team",
+    "predicted_behavior": "Confirmation",
+    "suggested_action": "Close Ticket"
+  },
+  {
+    "thread_id": 2,
+    "sender": "james@booking.com",
+    "email_text": "From: james@booking.com\nTo: info@company.com\nSubject: Account Verified\n\nWe are happy to confirm your participation in our upcoming event.\nRegards,\nSupport Team\n---\nFrom: info@company.com\nTo: james@booking.com\nSubject: Re: Account Verified\n\nWe have received your communication and will process it accordingly.\nBest regards,\nCustomer Service Team",
+    "predicted_behavior": "Confirmation",
+    "suggested_action": "Close Ticket"
+  },
+  {
+    "thread_id": 3,
+    "sender": "lisa@hotel2.com",
+    "email_text": "From: lisa@hotel2.com\nTo: customer.service@company.com\nSubject: Service Booking Confirmed\n\nYour booking confirmation number is next Monday. Please keep this for your records.\nRegards,\nHotel Staff\n---\nFrom: customer.service@company.com\nTo: lisa@hotel2.com\nSubject: Re: Service Booking Confirmed\n\nYour request is being reviewed by our team.\nBest regards,\nCustomer Service Team",
+    "predicted_behavior": "Confirmation",
+    "suggested_action": "Close Ticket"
+  },
+  {
+    "thread_id": 4,
+    "sender": "david@business.com",
+    "email_text": "From: david@business.com\nTo: support@company.com\nSubject: Service Booking Confirmed\n\nYour booking confirmation number is Booking #ABC123. Please keep this for your records.\nRegards,\nSupport Team\n---\nFrom: support@company.com\nTo: david@business.com\nSubject: Re: Service Booking Confirmed\n\nWe acknowledge receipt of your message and will respond shortly.\nBest regards,\nCustomer Service Team",
+    "predicted_behavior": "Confirmation",
+    "suggested_action": "Close Ticket"
+  },
+  {
+    "thread_id": 5,
+    "sender": "john@group.com",
+    "email_text": "From: john@group.com\nTo: manager@company.com\nSubject: Event Confirmed\n\nThis email confirms your registration for our service. Welcome aboard!\nRegards,\nBooking Team\n---\nFrom: manager@company.com\nTo: john@group.com\nSubject: Re: Event Confirmed\n\nWe have received your communication and will process it accordingly.\nBest regards,\nCustomer Service Team",
+    "predicted_behavior": "Confirmation",
+    "suggested_action": "Close Ticket"
+  },
+  {
+    "thread_id": 6,
+    "sender": "mike@solutions.com",
+    "email_text": "From: mike@solutions.com\nTo: admin@company.com\nSubject: Meeting Confirmed\n\nConfirmation: Your service request has been accepted and scheduled.\nRegards,\nBooking Team\n---\nFrom: admin@company.com\nTo: mike@solutions.com\nSubject: Re: Meeting Confirmed\n\nThank you for your message. We will review and get back to you soon.\nBest regards,\nCustomer Service Team",
+    "predicted_behavior": "Confirmation",
+    "suggested_action": "Close Ticket"
+  },
+  {
+    "thread_id": 7,
+    "sender": "david@group.com",
+    "email_text": "From: david@group.com\nTo: customer.service@company.com\nSubject: Request Approved\n\nYour appointment has been scheduled and confirmed for December 15th. See you then!\nRegards,\nHotel Staff\n---\nFrom: customer.service@company.com\nTo: david@group.com\nSubject: Re: Request Approved\n\nWe acknowledge receipt of your message and will respond shortly.\nBest regards,\nCustomer Service Team",
+    "predicted_behavior": "Confirmation",
+    "suggested_action": "Close Ticket"
+  },
+  {
+    "thread_id": 8,
+    "sender": "maria@enterprise.com",
+    "email_text": "From: maria@enterprise.com\nTo: reservations@company.com\nSubject: Booking Confirmation\n\nConfirmation: Your service request has been accepted and scheduled.\nRegards,\nAdmin Team\n---\nFrom: reservations@company.com\nTo: maria@enterprise.com\nSubject: Re: Booking Confirmation\n\nThank you for the update. We will take necessary action.\nBest regards,\nCustomer Service Team",
+    "predicted_behavior": "Confirmation",
+    "suggested_action": "Close Ticket"
+  },
+  {
+    "thread_id": 9,
+    "sender": "tom@partner.com",
+    "email_text": "From: tom@partner.com\nTo: customer.service@company.com\nSubject: Meeting Confirmed\n\nYour booking confirmation number is Booking #ABC123. Please keep this for your records.\nRegards,\nSupport Team\n---\nFrom: customer.service@company.com\nTo: tom@partner.com\nSubject: Re: Meeting Confirmed\n\nWe understand your concern and will address it promptly.\nBest regards,\nCustomer Service Team",
+    "predicted_behavior": "Unknown",
+    "suggested_action": "Review Manually"
+  },
+  {
+    "thread_id": 10,
+    "sender": "david@hotel2.com",
+    "email_text": "From: david@hotel2.com\nTo: customer.service@company.com\nSubject: Registration Confirmed\n\nYour order #Booking #ABC123 has been confirmed and will be processed shortly.\nRegards,\nBooking Team\n---\nFrom: customer.service@company.com\nTo: david@hotel2.com\nSubject: Re: Registration Confirmed\n\nWe appreciate you bringing this to our attention.\nBest regards,\nCustomer Service Team",
+    "predicted_behavior": "Confirmation",
+    "suggested_action": "Close Ticket"
+  },
+  {
+    "thread_id": 11,
+    "sender": "emma@events.com",
+    "email_text": "From: emma@events.com\nTo: reservations@company.com\nSubject: Payment Confirmed\n\nYour booking confirmation number is Room 205. Please keep this for your records.\nRegards,\nSupport Team\n---\nFrom: reservations@company.com\nTo: emma@events.com\nSubject: Re: Payment Confirmed\n\nWe understand your concern and will address it promptly.\nBest regards,\nCustomer Service Team",
+    "predicted_behavior": "Unknown",
+    "suggested_action": "Review Manually"
+  },
+  {
+    "thread_id": 12,
+    "sender": "mike@booking.com",
+    "email_text": "From: mike@booking.com\nTo: reservations@company.com\nSubject: Subscription Confirmed\n\nThank you for choosing our service. Your reservation is now confirmed.\nRegards,\nBooking Team\n---\nFrom: reservations@company.com\nTo: mike@booking.com\nSubject: Re: Subscription Confirmed\n\nWe understand your concern and will address it promptly.\nBest regards,\nCustomer Service Team",
+    "predicted_behavior": "Unknown",
+    "suggested_action": "Review Manually"
+  },
+  {
+    "thread_id": 13,
+    "sender": "lisa@solutions.com",
+    "email_text": "From: lisa@solutions.com\nTo: info@company.com\nSubject: Reservation Confirmed\n\nYour appointment has been scheduled and confirmed for next Monday. See you then!\nRegards,\nCustomer Service\n---\nFrom: info@company.com\nTo: lisa@solutions.com\nSubject: Re: Reservation Confirmed\n\nWe understand your concern and will address it promptly.\nBest regards,\nCustomer Service Team",
+    "predicted_behavior": "Unknown",
+    "suggested_action": "Review Manually"
+  },
+  {
+    "thread_id": 14,
+    "sender": "david@hotel1.com",
+    "email_text": "From: david@hotel1.com\nTo: manager@company.com\nSubject: Order Confirmation\n\nYour order #Booking #ABC123 has been confirmed and will be processed shortly.\nRegards,\nAdmin Team\n---\nFrom: manager@company.com\nTo: david@hotel1.com\nSubject: Re: Order Confirmation\n\nYour message has been forwarded to the appropriate department.\nBest regards,\nCustomer Service Team",
+    "predicted_behavior": "Confirmation",
+    "suggested_action": "Close Ticket"
+  },
+  {
+    "thread_id": 15,
+    "sender": "sarah@hotel1.com",
+    "email_text": "From: sarah@hotel1.com\nTo: support@company.com\nSubject: Service Booking Confirmed\n\nConfirmation: Your service request has been accepted and scheduled.\nRegards,\nHotel Staff\n---\nFrom: support@company.com\nTo: sarah@hotel1.com\nSubject: Re: Service Booking Confirmed\n\nWe have received your communication and will process it accordingly.\nBest regards,\nCustomer Service Team",
+    "predicted_behavior": "Confirmation",
+    "suggested_action": "Close Ticket"
+  },
+  {
+    "thread_id": 16,
+    "sender": "tom@vendor.com",
+    "email_text": "From: tom@vendor.com\nTo: reservations@company.com\nSubject: Appointment Confirmed\n\nThank you for choosing our service. Your reservation is now confirmed.\nRegards,\nBooking Team\n---\nFrom: reservations@company.com\nTo: tom@vendor.com\nSubject: Re: Appointment Confirmed\n\nYour message has been forwarded to the appropriate department.\nBest regards,\nCustomer Service Team",
+    "predicted_behavior": "Confirmation",
+    "suggested_action": "Close Ticket"
+  },
+  {
+    "thread_id": 17,
+    "sender": "john@travel.com",
+    "email_text": "From: john@travel.com\nTo: admin@company.com\nSubject: Meeting Confirmed\n\nThis email confirms your registration for our service. Welcome aboard!\nRegards,\nAdmin Team\n---\nFrom: admin@company.com\nTo: john@travel.com\nSubject: Re: Meeting Confirmed\n\nYour request is being reviewed by our team.\nBest regards,\nCustomer Service Team",
+    "predicted_behavior": "Confirmation",
+    "suggested_action": "Close Ticket"
+  },
+  {
+    "thread_id": 18,
+    "sender": "maria@hospitality.com",
+    "email_text": "From: maria@hospitality.com\nTo: billing@company.com\nSubject: Appointment Confirmed\n\nWe confirm that your subscription has been activated successfully.\nRegards,\nCustomer Service\n---\nFrom: billing@company.com\nTo: maria@hospitality.com\nSubject: Re: Appointment Confirmed\n\nThank you for your message. We will review and get back to you soon.\nBest regards,\nCustomer Service Team",
+    "predicted_behavior": "Confirmation",
+    "suggested_action": "Close Ticket"
+  },
+  {
+    "thread_id": 19,
+    "sender": "tom@corporate.com",
+    "email_text": "From: tom@corporate.com\nTo: sales@company.com\nSubject: Booking Confirmation\n\nYour order #$1,500 has been confirmed and will be processed shortly.\nRegards,\nHotel Staff\n---\nFrom: sales@company.com\nTo: tom@corporate.com\nSubject: Re: Booking Confirmation\n\nWe acknowledge receipt of your message and will respond shortly.\nBest regards,\nCustomer Service Team",
+    "predicted_behavior": "Confirmation",
+    "suggested_action": "Close Ticket"
+  },
+  {
+    "thread_id": 20,
+    "sender": "mike@enterprise.com",
+    "email_text": "From: mike@enterprise.com\nTo: bookings@company.com\nSubject: Registration Confirmed\n\nThank you for your booking. Your reservation has been confirmed for next Monday.\nRegards,\nAdmin Team\n---\nFrom: bookings@company.com\nTo: mike@enterprise.com\nSubject: Re: Registration Confirmed\n\nYour message has been forwarded to the appropriate department.\nBest regards,\nCustomer Service Team",
+    "predicted_behavior": "Confirmation",
+    "suggested_action": "Close Ticket"
+  },
+  {
+    "thread_id": 21,
+    "sender": "lisa@business.com",
+    "email_text": "From: lisa@business.com\nTo: admin@company.com\nSubject: Account Verified\n\nConfirmation: Your service request has been accepted and scheduled.\nRegards,\nSupport Team\n---\nFrom: admin@company.com\nTo: lisa@business.com\nSubject: Re: Account Verified\n\nThank you for your message. We will review and get back to you soon.\nBest regards,\nCustomer Service Team",
+    "predicted_behavior": "Confirmation",
+    "suggested_action": "Close Ticket"
+  },
+  {
+    "thread_id": 22,
+    "sender": "sarah@corporate.com",
+    "email_text": "From: sarah@corporate.com\nTo: sales@company.com\nSubject: Request Approved\n\nThis email confirms your registration for our service. Welcome aboard!\nRegards,\nAdmin Team\n---\nFrom: sales@company.com\nTo: sarah@corporate.com\nSubject: Re: Request Approved\n\nWe understand your concern and will address it promptly.\nBest regards,\nCustomer Service Team",
+    "predicted_behavior": "Confirmation",
+    "suggested_action": "Close Ticket"
+  },
+  {
+    "thread_id": 23,
+    "sender": "sarah@hotel1.com",
+    "email_text": "From: sarah@hotel1.com\nTo: info@company.com\nSubject: Subscription Confirmed\n\nYour appointment has been scheduled and confirmed for Order #12345. See you then!\nRegards,\nAdmin Team\n---\nFrom: info@company.com\nTo: sarah@hotel1.com\nSubject: Re: Subscription Confirmed\n\nWe appreciate you bringing this to our attention.\nBest regards,\nCustomer Service Team",
+    "predicted_behavior": "Confirmation",
+    "suggested_action": "Close Ticket"
+  },
+  {
+    "thread_id": 24,
+    "sender": "john@services.com",
+    "email_text": "From: john@services.com\nTo: bookings@company.com\nSubject: Event Confirmed\n\nWe confirm receipt of your request and it has been approved.\nRegards,\nSupport Team\n---\nFrom: bookings@company.com\nTo: john@services.com\nSubject: Re: Event Confirmed\n\nWe acknowledge receipt of your message and will respond shortly.\nBest regards,\nCustomer Service Team",
+    "predicted_behavior": "Confirmation",
+    "suggested_action": "Close Ticket"
+  },
+  {
+    "thread_id": 25,
+    "sender": "tom@management.com",
+    "email_text": "From: tom@management.com\nTo: info@company.com\nSubject: Meeting Confirmed\n\nThis email confirms your registration for our service. Welcome aboard!\nRegards,\nAdmin Team\n---\nFrom: info@company.com\nTo: tom@management.com\nSubject: Re: Meeting Confirmed\n\nThank you for the update. We will take necessary action.\nBest regards,\nCustomer Service Team",
+    "predicted_behavior": "Confirmation",
+    "suggested_action": "Close Ticket"
+  },
+  {
+    "thread_id": 26,
+    "sender": "tom@group.com",
+    "email_text": "From: tom@group.com\nTo: info@company.com\nSubject: Cancellation Request\n\nWe strongly object to the additional fees that were not disclosed initially.\nRegards,\nHotel Staff\n---\nFrom: info@company.com\nTo: tom@group.com\nSubject: Re: Cancellation Request\n\nWe understand your concern and will address it promptly.\nBest regards,\nCustomer Service Team",
+    "predicted_behavior": "Objection",
+    "suggested_action": "Request Clarification"
+  },
+  {
+    "thread_id": 27,
+    "sender": "david@business.com",
+    "email_text": "From: david@business.com\nTo: sales@company.com\nSubject: Cannot Proceed\n\nThe service quality does not meet our expectations. We need immediate resolution.\nRegards,\nAdmin Team\n---\nFrom: sales@company.com\nTo: david@business.com\nSubject: Re: Cannot Proceed\n\nWe have received your communication and will process it accordingly.\nBest regards,\nCustomer Service Team",
+    "predicted_behavior": "Objection",
+    "suggested_action": "Request Clarification"
+  },
+  {
+    "thread_id": 28,
+    "sender": "james@travel.com",
+    "email_text": "From: james@travel.com\nTo: help@company.com\nSubject: Billing Dispute\n\nWe cannot agree to the current terms and conditions as stated.\nRegards,\nSupport Team\n---\nFrom: help@company.com\nTo: james@travel.com\nSubject: Re: Billing Dispute\n\nYour request is being reviewed by our team.\nBest regards,\nCustomer Service Team",
+    "predicted_behavior": "Objection",
+    "suggested_action": "Request Clarification"
+  },
+  {
+    "thread_id": 29,
+    "sender": "sarah@company.com",
+    "email_text": "From: sarah@company.com\nTo: help@company.com\nSubject: Cancellation Request\n\nThe billing amount appears incorrect. We dispute these charges.\nRegards,\nSupport Team\n---\nFrom: help@company.com\nTo: sarah@company.com\nSubject: Re: Cancellation Request\n\nWe have received your communication and will process it accordingly.\nBest regards,\nCustomer Service Team",
+    "predicted_behavior": "Objection",
+    "suggested_action": "Request Clarification"
+  },
+  {
+    "thread_id": 30,
+    "sender": "anna@client.com",
+    "email_text": "From: anna@client.com\nTo: billing@company.com\nSubject: Cancellation Request\n\nThe billing amount appears incorrect. We dispute these charges.\nRegards,\nAdmin Team\n---\nFrom: billing@company.com\nTo: anna@client.com\nSubject: Re: Cancellation Request\n\nThank you for your message. We will review and get back to you soon.\nBest regards,\nCustomer Service Team",
+    "predicted_behavior": "Objection",
+    "suggested_action": "Request Clarification"
+  },
+  {
+    "thread_id": 31,
+    "sender": "maria@solutions.com",
+    "email_text": "From: maria@solutions.com\nTo: billing@company.com\nSubject: Cannot Proceed\n\nThe service quality does not meet our expectations. We need immediate resolution.\nRegards,\nSupport Team\n---\nFrom: billing@company.com\nTo: maria@solutions.com\nSubject: Re: Cannot Proceed\n\nWe understand your concern and will address it promptly.\nBest regards,\nCustomer Service Team",
+    "predicted_behavior": "Objection",
+    "suggested_action": "Request Clarification"
+  },
+  {
+    "thread_id": 32,
+    "sender": "mike@company.com",
+    "email_text": "From: mike@company.com\nTo: sales@company.com\nSubject: Policy Dispute\n\nWe object to the changes made without prior notification.\nRegards,\nBooking Team\n---\nFrom: sales@company.com\nTo: mike@company.com\nSubject: Re: Policy Dispute\n\nWe acknowledge receipt of your message and will respond shortly.\nBest regards,\nCustomer Service Team",
+    "predicted_behavior": "Objection",
+    "suggested_action": "Request Clarification"
+  },
+  {
+    "thread_id": 33,
+    "sender": "maria@company.com",
+    "email_text": "From: maria@company.com\nTo: admin@company.com\nSubject: Terms Objection\n\nWe have concerns about the contract terms and cannot proceed as planned.\nRegards,\nHotel Staff\n---\nFrom: admin@company.com\nTo: maria@company.com\nSubject: Re: Terms Objection\n\nWe understand your concern and will address it promptly.\nBest regards,\nCustomer Service Team",
+    "predicted_behavior": "Objection",
+    "suggested_action": "Request Clarification"
+  },
+  {
+    "thread_id": 34,
+    "sender": "sarah@customer.com",
+    "email_text": "From: sarah@customer.com\nTo: manager@company.com\nSubject: Quality Concerns\n\nWe cannot accept the current timeline and need to renegotiate.\nRegards,\nCustomer Service\n---\nFrom: manager@company.com\nTo: sarah@customer.com\nSubject: Re: Quality Concerns\n\nThank you for your message. We will review and get back to you soon.\nBest regards,\nCustomer Service Team",
+    "predicted_behavior": "Objection",
+    "suggested_action": "Request Clarification"
+  },
+  {
+    "thread_id": 35,
+    "sender": "maria@vendor.com",
+    "email_text": "From: maria@vendor.com\nTo: reservations@company.com\nSubject: Service Complaint\n\nThe current proposal does not meet our requirements.\nRegards,\nSupport Team\n---\nFrom: reservations@company.com\nTo: maria@vendor.com\nSubject: Re: Service Complaint\n\nThank you for your message. We will review and get back to you soon.\nBest regards,\nCustomer Service Team",
+    "predicted_behavior": "Objection",
+    "suggested_action": "Request Clarification"
+  },
+  {
+    "thread_id": 36,
+    "sender": "sarah@booking.com",
+    "email_text": "From: sarah@booking.com\nTo: reservations@company.com\nSubject: Contract Dispute\n\nWe have concerns about the contract terms and cannot proceed as planned.\nRegards,\nCustomer Service\n---\nFrom: reservations@company.com\nTo: sarah@booking.com\nSubject: Re: Contract Dispute\n\nYour request is being reviewed by our team.\nBest regards,\nCustomer Service Team",
+    "predicted_behavior": "Objection",
+    "suggested_action": "Request Clarification"
+  },
+  {
+    "thread_id": 37,
+    "sender": "maria@services.com",
+    "email_text": "From: maria@services.com\nTo: sales@company.com\nSubject: Quality Concerns\n\nThere seems to be an issue with the pricing structure. We object to these charges.\nRegards,\nSupport Team\n---\nFrom: sales@company.com\nTo: maria@services.com\nSubject: Re: Quality Concerns\n\nYour message has been logged and will be handled appropriately.\nBest regards,\nCustomer Service Team",
+    "predicted_behavior": "Objection",
+    "suggested_action": "Request Clarification"
+  },
+  {
+    "thread_id": 38,
+    "sender": "emma@hospitality.com",
+    "email_text": "From: emma@hospitality.com\nTo: billing@company.com\nSubject: Terms Objection\n\nThe service quality does not meet our expectations. We need immediate resolution.\nRegards,\nCustomer Service\n---\nFrom: billing@company.com\nTo: emma@hospitality.com\nSubject: Re: Terms Objection\n\nThank you for your message. We will review and get back to you soon.\nBest regards,\nCustomer Service Team",
+    "predicted_behavior": "Objection",
+    "suggested_action": "Request Clarification"
+  },
+  {
+    "thread_id": 39,
+    "sender": "emma@customer.com",
+    "email_text": "From: emma@customer.com\nTo: reservations@company.com\nSubject: Payment Issue\n\nThis does not align with what was originally discussed. We need clarification.\nRegards,\nManager\n---\nFrom: reservations@company.com\nTo: emma@customer.com\nSubject: Re: Payment Issue\n\nYour message has been logged and will be handled appropriately.\nBest regards,\nCustomer Service Team",
+    "predicted_behavior": "Objection",
+    "suggested_action": "Request Clarification"
+  },
+  {
+    "thread_id": 40,
+    "sender": "james@partner.com",
+    "email_text": "From: james@partner.com\nTo: reservations@company.com\nSubject: Quality Concerns\n\nWe cannot accept the current timeline and need to renegotiate.\nRegards,\nAdmin Team\n---\nFrom: reservations@company.com\nTo: james@partner.com\nSubject: Re: Quality Concerns\n\nYour message has been logged and will be handled appropriately.\nBest regards,\nCustomer Service Team",
+    "predicted_behavior": "Objection",
+    "suggested_action": "Request Clarification"
+  },
+  {
+    "thread_id": 41,
+    "sender": "anna@enterprise.com",
+    "email_text": "From: anna@enterprise.com\nTo: bookings@company.com\nSubject: Policy Dispute\n\nThere seems to be an issue with the pricing structure. We object to these charges.\nRegards,\nHotel Staff\n---\nFrom: bookings@company.com\nTo: anna@enterprise.com\nSubject: Re: Policy Dispute\n\nWe have received your communication and will process it accordingly.\nBest regards,\nCustomer Service Team",
+    "predicted_behavior": "Objection",
+    "suggested_action": "Request Clarification"
+  },
+  {
+    "thread_id": 42,
+    "sender": "lisa@client.com",
+    "email_text": "From: lisa@client.com\nTo: bookings@company.com\nSubject: Service Complaint\n\nWe cannot accept the current timeline and need to renegotiate.\nRegards,\nCustomer Service\n---\nFrom: bookings@company.com\nTo: lisa@client.com\nSubject: Re: Service Complaint\n\nYour message has been logged and will be handled appropriately.\nBest regards,\nCustomer Service Team",
+    "predicted_behavior": "Objection",
+    "suggested_action": "Request Clarification"
+  },
+  {
+    "thread_id": 43,
+    "sender": "james@company.com",
+    "email_text": "From: james@company.com\nTo: manager@company.com\nSubject: Contract Dispute\n\nWe cannot move forward without addressing the policy violations.\nRegards,\nBooking Team\n---\nFrom: manager@company.com\nTo: james@company.com\nSubject: Re: Contract Dispute\n\nThank you for your message. We will review and get back to you soon.\nBest regards,\nCustomer Service Team",
+    "predicted_behavior": "Confirmation",
+    "suggested_action": "Close Ticket"
+  },
+  {
+    "thread_id": 44,
+    "sender": "sarah@group.com",
+    "email_text": "From: sarah@group.com\nTo: support@company.com\nSubject: Policy Dispute\n\nWe strongly object to the additional fees that were not disclosed initially.\nRegards,\nBooking Team\n---\nFrom: support@company.com\nTo: sarah@group.com\nSubject: Re: Policy Dispute\n\nThank you for your message. We will review and get back to you soon.\nBest regards,\nCustomer Service Team",
+    "predicted_behavior": "Objection",
+    "suggested_action": "Request Clarification"
+  },
+  {
+    "thread_id": 45,
+    "sender": "mike@partner.com",
+    "email_text": "From: mike@partner.com\nTo: admin@company.com\nSubject: Quality Concerns\n\nWe cannot agree to the current terms and conditions as stated.\nRegards,\nSupport Team\n---\nFrom: admin@company.com\nTo: mike@partner.com\nSubject: Re: Quality Concerns\n\nWe acknowledge receipt of your message and will respond shortly.\nBest regards,\nCustomer Service Team",
+    "predicted_behavior": "Objection",
+    "suggested_action": "Request Clarification"
+  },
+  {
+    "thread_id": 46,
+    "sender": "mike@hotel2.com",
+    "email_text": "From: mike@hotel2.com\nTo: sales@company.com\nSubject: Service Complaint\n\nThe current proposal does not meet our requirements.\nRegards,\nSupport Team\n---\nFrom: sales@company.com\nTo: mike@hotel2.com\nSubject: Re: Service Complaint\n\nYour message has been logged and will be handled appropriately.\nBest regards,\nCustomer Service Team",
+    "predicted_behavior": "Objection",
+    "suggested_action": "Request Clarification"
+  },
+  {
+    "thread_id": 47,
+    "sender": "maria@services.com",
+    "email_text": "From: maria@services.com\nTo: customer.service@company.com\nSubject: Payment Issue\n\nWe cannot agree to the current terms and conditions as stated.\nRegards,\nCustomer Service\n---\nFrom: customer.service@company.com\nTo: maria@services.com\nSubject: Re: Payment Issue\n\nYour request is being reviewed by our team.\nBest regards,\nCustomer Service Team",
+    "predicted_behavior": "Objection",
+    "suggested_action": "Request Clarification"
+  },
+  {
+    "thread_id": 48,
+    "sender": "james@hospitality.com",
+    "email_text": "From: james@hospitality.com\nTo: billing@company.com\nSubject: Payment Issue\n\nThis does not align with what was originally discussed. We need clarification.\nRegards,\nSupport Team\n---\nFrom: billing@company.com\nTo: james@hospitality.com\nSubject: Re: Payment Issue\n\nWe have received your communication and will process it accordingly.\nBest regards,\nCustomer Service Team",
+    "predicted_behavior": "Objection",
+    "suggested_action": "Request Clarification"
+  },
+  {
+    "thread_id": 49,
+    "sender": "sarah@client.com",
+    "email_text": "From: sarah@client.com\nTo: reservations@company.com\nSubject: Cancellation Request\n\nThe current proposal does not meet our requirements.\nRegards,\nHotel Staff\n---\nFrom: reservations@company.com\nTo: sarah@client.com\nSubject: Re: Cancellation Request\n\nWe have received your communication and will process it accordingly.\nBest regards,\nCustomer Service Team",
+    "predicted_behavior": "Objection",
+    "suggested_action": "Request Clarification"
+  },
+  {
+    "thread_id": 50,
+    "sender": "james@hotel1.com",
+    "email_text": "From: james@hotel1.com\nTo: support@company.com\nSubject: Service Complaint\n\nWe object to the changes made without prior notification.\nRegards,\nManager\n---\nFrom: support@company.com\nTo: james@hotel1.com\nSubject: Re: Service Complaint\n\nYour message has been forwarded to the appropriate department.\nBest regards,\nCustomer Service Team",
+    "predicted_behavior": "Escalation",
+    "suggested_action": "Forward to Manager"
+  },
+  {
+    "thread_id": 51,
+    "sender": "john@group.com",
+    "email_text": "From: john@group.com\nTo: manager@company.com\nSubject: Critical Issue Escalation\n\nThis matter needs to be escalated to someone with decision-making authority.\nRegards,\nCustomer Service\n---\nFrom: manager@company.com\nTo: john@group.com\nSubject: Re: Critical Issue Escalation\n\nThank you for contacting us. We will follow up as needed.\nBest regards,\nCustomer Service Team",
+    "predicted_behavior": "Escalation",
+    "suggested_action": "Forward to Manager"
+  },
+  {
+    "thread_id": 52,
+    "sender": "anna@booking.com",
+    "email_text": "From: anna@booking.com\nTo: reservations@company.com\nSubject: VP Attention Required\n\nThis issue requires immediate escalation to management level for resolution.\nRegards,\nBooking Team\n---\nFrom: reservations@company.com\nTo: anna@booking.com\nSubject: Re: VP Attention Required\n\nThank you for contacting us. We will follow up as needed.\nBest regards,\nCustomer Service Team",
+    "predicted_behavior": "Escalation",
+    "suggested_action": "Forward to Manager"
+  },
+  {
+    "thread_id": 53,
+    "sender": "james@client.com",
+    "email_text": "From: james@client.com\nTo: manager@company.com\nSubject: Executive Review Request\n\nThe situation has reached a critical point and needs management escalation.\nRegards,\nBooking Team\n---\nFrom: manager@company.com\nTo: james@client.com\nSubject: Re: Executive Review Request\n\nWe acknowledge receipt of your message and will respond shortly.\nBest regards,\nCustomer Service Team",
+    "predicted_behavior": "Escalation",
+    "suggested_action": "Forward to Manager"
+  },
+  {
+    "thread_id": 54,
+    "sender": "lisa@booking.com",
+    "email_text": "From: lisa@booking.com\nTo: manager@company.com\nSubject: Immediate Attention Needed\n\nThis has been unresolved for too long. Please escalate to senior management immediately.\nRegards,\nAdmin Team\n---\nFrom: manager@company.com\nTo: lisa@booking.com\nSubject: Re: Immediate Attention Needed\n\nWe acknowledge receipt of your message and will respond shortly.\nBest regards,\nCustomer Service Team",
+    "predicted_behavior": "Escalation",
+    "suggested_action": "Forward to Manager"
+  },
+  {
+    "thread_id": 55,
+    "sender": "emma@travel.com",
+    "email_text": "From: emma@travel.com\nTo: bookings@company.com\nSubject: High Priority Escalation\n\nPlease escalate this to your regional manager for immediate action.\nRegards,\nHotel Staff\n---\nFrom: bookings@company.com\nTo: emma@travel.com\nSubject: Re: High Priority Escalation\n\nThank you for the update. We will take necessary action.\nBest regards,\nCustomer Service Team",
+    "predicted_behavior": "Escalation",
+    "suggested_action": "Forward to Manager"
+  },
+  {
+    "thread_id": 56,
+    "sender": "mike@management.com",
+    "email_text": "From: mike@management.com\nTo: customer.service@company.com\nSubject: URGENT: Manager Review Required\n\nI demand to speak with your manager regarding this unresolved issue.\nRegards,\nManager\n---\nFrom: customer.service@company.com\nTo: mike@management.com\nSubject: Re: URGENT: Manager Review Required\n\nWe acknowledge receipt of your message and will respond shortly.\nBest regards,\nCustomer Service Team",
+    "predicted_behavior": "Escalation",
+    "suggested_action": "Forward to Manager"
+  },
+  {
+    "thread_id": 57,
+    "sender": "maria@customer.com",
+    "email_text": "From: maria@customer.com\nTo: billing@company.com\nSubject: Critical Issue Escalation\n\nThe situation has reached a critical point and needs management escalation.\nRegards,\nHotel Staff\n---\nFrom: billing@company.com\nTo: maria@customer.com\nSubject: Re: Critical Issue Escalation\n\nWe understand your concern and will address it promptly.\nBest regards,\nCustomer Service Team",
+    "predicted_behavior": "Escalation",
+    "suggested_action": "Forward to Manager"
+  },
+  {
+    "thread_id": 58,
+    "sender": "john@hotel1.com",
+    "email_text": "From: john@hotel1.com\nTo: manager@company.com\nSubject: Emergency Escalation\n\nI demand to speak with your manager regarding this unresolved issue.\nRegards,\nHotel Staff\n---\nFrom: manager@company.com\nTo: john@hotel1.com\nSubject: Re: Emergency Escalation\n\nYour message has been logged and will be handled appropriately.\nBest regards,\nCustomer Service Team",
+    "predicted_behavior": "Escalation",
+    "suggested_action": "Forward to Manager"
+  },
+  {
+    "thread_id": 59,
+    "sender": "mike@business.com",
+    "email_text": "From: mike@business.com\nTo: support@company.com\nSubject: High Priority Escalation\n\nThis issue has gone beyond normal channels and requires senior oversight.\nRegards,\nSupport Team\n---\nFrom: support@company.com\nTo: mike@business.com\nSubject: Re: High Priority Escalation\n\nThank you for contacting us. We will follow up as needed.\nBest regards,\nCustomer Service Team",
+    "predicted_behavior": "Escalation",
+    "suggested_action": "Forward to Manager"
+  },
+  {
+    "thread_id": 60,
+    "sender": "emma@events.com",
+    "email_text": "From: emma@events.com\nTo: admin@company.com\nSubject: URGENT: Manager Review Required\n\nI need to escalate this matter to your supervisor as the current solution is inadequate.\nRegards,\nManager\n---\nFrom: admin@company.com\nTo: emma@events.com\nSubject: Re: URGENT: Manager Review Required\n\nThank you for your message. We will review and get back to you soon.\nBest regards,\nCustomer Service Team",
+    "predicted_behavior": "Escalation",
+    "suggested_action": "Forward to Manager"
+  },
+  {
+    "thread_id": 61,
+    "sender": "sarah@vendor.com",
+    "email_text": "From: sarah@vendor.com\nTo: billing@company.com\nSubject: Supervisor Intervention\n\nI'm requesting immediate escalation to the VP level for this matter.\nRegards,\nAdmin Team\n---\nFrom: billing@company.com\nTo: sarah@vendor.com\nSubject: Re: Supervisor Intervention\n\nYour request is being reviewed by our team.\nBest regards,\nCustomer Service Team",
+    "predicted_behavior": "Escalation",
+    "suggested_action": "Forward to Manager"
+  },
+  {
+    "thread_id": 62,
+    "sender": "emma@partner.com",
+    "email_text": "From: emma@partner.com\nTo: support@company.com\nSubject: URGENT: Manager Review Required\n\nThis needs to be reviewed by someone at the executive level immediately.\nRegards,\nManager\n---\nFrom: support@company.com\nTo: emma@partner.com\nSubject: Re: URGENT: Manager Review Required\n\nThank you for the update. We will take necessary action.\nBest regards,\nCustomer Service Team",
+    "predicted_behavior": "Escalation",
+    "suggested_action": "Forward to Manager"
+  },
+  {
+    "thread_id": 63,
+    "sender": "david@company.com",
+    "email_text": "From: david@company.com\nTo: customer.service@company.com\nSubject: Management Override Needed\n\nThis requires executive intervention. Please forward to your director immediately.\nRegards,\nBooking Team\n---\nFrom: customer.service@company.com\nTo: david@company.com\nSubject: Re: Management Override Needed\n\nYour message has been logged and will be handled appropriately.\nBest regards,\nCustomer Service Team",
+    "predicted_behavior": "Escalation",
+    "suggested_action": "Forward to Manager"
+  },
+  {
+    "thread_id": 64,
+    "sender": "lisa@partner.com",
+    "email_text": "From: lisa@partner.com\nTo: bookings@company.com\nSubject: Immediate Attention Needed\n\nThe situation has reached a critical point and needs management escalation.\nRegards,\nHotel Staff\n---\nFrom: bookings@company.com\nTo: lisa@partner.com\nSubject: Re: Immediate Attention Needed\n\nYour request is being reviewed by our team.\nBest regards,\nCustomer Service Team",
+    "predicted_behavior": "Escalation",
+    "suggested_action": "Forward to Manager"
+  },
+  {
+    "thread_id": 65,
+    "sender": "anna@supplier.com",
+    "email_text": "From: anna@supplier.com\nTo: billing@company.com\nSubject: Immediate Attention Needed\n\nThis needs to be reviewed by someone at the executive level immediately.\nRegards,\nManager\n---\nFrom: billing@company.com\nTo: anna@supplier.com\nSubject: Re: Immediate Attention Needed\n\nThank you for the update. We will take necessary action.\nBest regards,\nCustomer Service Team",
+    "predicted_behavior": "Escalation",
+    "suggested_action": "Forward to Manager"
+  },
+  {
+    "thread_id": 66,
+    "sender": "sarah@partner.com",
+    "email_text": "From: sarah@partner.com\nTo: manager@company.com\nSubject: Emergency Escalation\n\nI'm requesting immediate escalation to the VP level for this matter.\nRegards,\nBooking Team\n---\nFrom: manager@company.com\nTo: sarah@partner.com\nSubject: Re: Emergency Escalation\n\nThank you for the update. We will take necessary action.\nBest regards,\nCustomer Service Team",
+    "predicted_behavior": "Escalation",
+    "suggested_action": "Forward to Manager"
+  },
+  {
+    "thread_id": 67,
+    "sender": "mike@management.com",
+    "email_text": "From: mike@management.com\nTo: customer.service@company.com\nSubject: VP Attention Required\n\nThis requires executive intervention. Please forward to your director immediately.\nRegards,\nAdmin Team\n---\nFrom: customer.service@company.com\nTo: mike@management.com\nSubject: Re: VP Attention Required\n\nYour request is being reviewed by our team.\nBest regards,\nCustomer Service Team",
+    "predicted_behavior": "Escalation",
+    "suggested_action": "Forward to Manager"
+  },
+  {
+    "thread_id": 68,
+    "sender": "tom@resort.com",
+    "email_text": "From: tom@resort.com\nTo: bookings@company.com\nSubject: Management Override Needed\n\nI'm escalating this complaint to the highest level due to lack of progress.\nRegards,\nCustomer Service\n---\nFrom: bookings@company.com\nTo: tom@resort.com\nSubject: Re: Management Override Needed\n\nWe acknowledge receipt of your message and will respond shortly.\nBest regards,\nCustomer Service Team",
+    "predicted_behavior": "Escalation",
+    "suggested_action": "Forward to Manager"
+  },
+  {
+    "thread_id": 69,
+    "sender": "sarah@resort.com",
+    "email_text": "From: sarah@resort.com\nTo: admin@company.com\nSubject: Executive Review Request\n\nThis issue requires immediate escalation to management level for resolution.\nRegards,\nBooking Team\n---\nFrom: admin@company.com\nTo: sarah@resort.com\nSubject: Re: Executive Review Request\n\nThank you for your message. We will review and get back to you soon.\nBest regards,\nCustomer Service Team",
+    "predicted_behavior": "Escalation",
+    "suggested_action": "Forward to Manager"
+  },
+  {
+    "thread_id": 70,
+    "sender": "lisa@group.com",
+    "email_text": "From: lisa@group.com\nTo: billing@company.com\nSubject: Director Level Review\n\nI'm requesting immediate escalation to the VP level for this matter.\nRegards,\nBooking Team\n---\nFrom: billing@company.com\nTo: lisa@group.com\nSubject: Re: Director Level Review\n\nWe acknowledge receipt of your message and will respond shortly.\nBest regards,\nCustomer Service Team",
+    "predicted_behavior": "Escalation",
+    "suggested_action": "Forward to Manager"
+  },
+  {
+    "thread_id": 71,
+    "sender": "sarah@group.com",
+    "email_text": "From: sarah@group.com\nTo: support@company.com\nSubject: High Priority Escalation\n\nI demand to speak with your manager regarding this unresolved issue.\nRegards,\nAdmin Team\n---\nFrom: support@company.com\nTo: sarah@group.com\nSubject: Re: High Priority Escalation\n\nYour message has been logged and will be handled appropriately.\nBest regards,\nCustomer Service Team",
+    "predicted_behavior": "Escalation",
+    "suggested_action": "Forward to Manager"
+  },
+  {
+    "thread_id": 72,
+    "sender": "maria@partner.com",
+    "email_text": "From: maria@partner.com\nTo: sales@company.com\nSubject: High Priority Escalation\n\nThis has been unresolved for too long. Please escalate to senior management immediately.\nRegards,\nSupport Team\n---\nFrom: sales@company.com\nTo: maria@partner.com\nSubject: Re: High Priority Escalation\n\nWe appreciate you bringing this to our attention.\nBest regards,\nCustomer Service Team",
+    "predicted_behavior": "Escalation",
+    "suggested_action": "Forward to Manager"
+  },
+  {
+    "thread_id": 73,
+    "sender": "john@hospitality.com",
+    "email_text": "From: john@hospitality.com\nTo: sales@company.com\nSubject: Senior Management Review\n\nThis requires executive intervention. Please forward to your director immediately.\nRegards,\nCustomer Service\n---\nFrom: sales@company.com\nTo: john@hospitality.com\nSubject: Re: Senior Management Review\n\nThank you for the update. We will take necessary action.\nBest regards,\nCustomer Service Team",
+    "predicted_behavior": "Escalation",
+    "suggested_action": "Forward to Manager"
+  },
+  {
+    "thread_id": 74,
+    "sender": "sarah@supplier.com",
+    "email_text": "From: sarah@supplier.com\nTo: manager@company.com\nSubject: Emergency Escalation\n\nThis matter needs to be escalated to someone with decision-making authority.\nRegards,\nCustomer Service\n---\nFrom: manager@company.com\nTo: sarah@supplier.com\nSubject: Re: Emergency Escalation\n\nWe have received your communication and will process it accordingly.\nBest regards,\nCustomer Service Team",
+    "predicted_behavior": "Escalation",
+    "suggested_action": "Forward to Manager"
+  },
+  {
+    "thread_id": 75,
+    "sender": "mike@vendor.com",
+    "email_text": "From: mike@vendor.com\nTo: customer.service@company.com\nSubject: URGENT: Manager Review Required\n\nThis needs to be reviewed by someone at the executive level immediately.\nRegards,\nManager\n---\nFrom: customer.service@company.com\nTo: mike@vendor.com\nSubject: Re: URGENT: Manager Review Required\n\nWe appreciate you bringing this to our attention.\nBest regards,\nCustomer Service Team",
+    "predicted_behavior": "Escalation",
+    "suggested_action": "Forward to Manager"
+  },
+  {
+    "thread_id": 76,
+    "sender": "mike@vendor.com",
+    "email_text": "From: mike@vendor.com\nTo: admin@company.com\nSubject: Important Update\n\nWe have new information about the venue change for your event.\nRegards,\nCustomer Service\n---\nFrom: admin@company.com\nTo: mike@vendor.com\nSubject: Re: Important Update\n\nYour message has been forwarded to the appropriate department.\nBest regards,\nCustomer Service Team",
+    "predicted_behavior": "New Information",
+    "suggested_action": "Update Records"
+  },
+  {
+    "thread_id": 77,
+    "sender": "john@services.com",
+    "email_text": "From: john@services.com\nTo: customer.service@company.com\nSubject: New Information Available\n\nNew process update: We've streamlined our booking system for better experience.\nRegards,\nManager\n---\nFrom: customer.service@company.com\nTo: john@services.com\nSubject: Re: New Information Available\n\nThank you for your message. We will review and get back to you soon.\nBest regards,\nCustomer Service Team",
+    "predicted_behavior": "New Information",
+    "suggested_action": "Update Records"
+  },
+  {
+    "thread_id": 78,
+    "sender": "mike@hotel2.com",
+    "email_text": "From: mike@hotel2.com\nTo: info@company.com\nSubject: Rate Updates\n\nNew information: Additional services are now available at your location.\nRegards,\nBooking Team\n---\nFrom: info@company.com\nTo: mike@hotel2.com\nSubject: Re: Rate Updates\n\nWe have received your communication and will process it accordingly.\nBest regards,\nCustomer Service Team",
+    "predicted_behavior": "Confirmation",
+    "suggested_action": "Close Ticket"
+  },
+  {
+    "thread_id": 79,
+    "sender": "david@events.com",
+    "email_text": "From: david@events.com\nTo: sales@company.com\nSubject: Updated Requirements\n\nNew process update: We've streamlined our booking system for better experience.\nRegards,\nCustomer Service\n---\nFrom: sales@company.com\nTo: david@events.com\nSubject: Re: Updated Requirements\n\nWe appreciate you bringing this to our attention.\nBest regards,\nCustomer Service Team",
+    "predicted_behavior": "New Information",
+    "suggested_action": "Update Records"
+  },
+  {
+    "thread_id": 80,
+    "sender": "anna@supplier.com",
+    "email_text": "From: anna@supplier.com\nTo: customer.service@company.com\nSubject: New Feature Announcement\n\nNew information: Additional services are now available at your location.\nRegards,\nHotel Staff\n---\nFrom: customer.service@company.com\nTo: anna@supplier.com\nSubject: Re: New Feature Announcement\n\nYour request is being reviewed by our team.\nBest regards,\nCustomer Service Team",
+    "predicted_behavior": "New Information",
+    "suggested_action": "Update Records"
+  },
+  {
+    "thread_id": 81,
+    "sender": "mike@company.com",
+    "email_text": "From: mike@company.com\nTo: sales@company.com\nSubject: Process Change Notice\n\nNew information: Additional services are now available at your location.\nRegards,\nSupport Team\n---\nFrom: sales@company.com\nTo: mike@company.com\nSubject: Re: Process Change Notice\n\nWe appreciate you bringing this to our attention.\nBest regards,\nCustomer Service Team",
+    "predicted_behavior": "New Information",
+    "suggested_action": "Update Records"
+  },
+  {
+    "thread_id": 82,
+    "sender": "david@management.com",
+    "email_text": "From: david@management.com\nTo: billing@company.com\nSubject: Updated Requirements\n\nWe're excited to share new features that are now available for your account.\nRegards,\nSupport Team\n---\nFrom: billing@company.com\nTo: david@management.com\nSubject: Re: Updated Requirements\n\nWe acknowledge receipt of your message and will respond shortly.\nBest regards,\nCustomer Service Team",
+    "predicted_behavior": "Confirmation",
+    "suggested_action": "Close Ticket"
+  },
+  {
+    "thread_id": 83,
+    "sender": "sarah@partner.com",
+    "email_text": "From: sarah@partner.com\nTo: support@company.com\nSubject: Additional Details\n\nWe have new information about the venue change for your event.\nRegards,\nBooking Team\n---\nFrom: support@company.com\nTo: sarah@partner.com\nSubject: Re: Additional Details\n\nThank you for the update. We will take necessary action.\nBest regards,\nCustomer Service Team",
+    "predicted_behavior": "New Information",
+    "suggested_action": "Update Records"
+  },
+  {
+    "thread_id": 84,
+    "sender": "tom@management.com",
+    "email_text": "From: tom@management.com\nTo: bookings@company.com\nSubject: Additional Details\n\nWe have updated our rates and terms. Please review the attached details.\nRegards,\nBooking Team\n---\nFrom: bookings@company.com\nTo: tom@management.com\nSubject: Re: Additional Details\n\nYour message has been forwarded to the appropriate department.\nBest regards,\nCustomer Service Team",
+    "predicted_behavior": "New Information",
+    "suggested_action": "Update Records"
+  },
+  {
+    "thread_id": 85,
+    "sender": "james@hospitality.com",
+    "email_text": "From: james@hospitality.com\nTo: bookings@company.com\nSubject: System Update\n\nNew process update: We've streamlined our booking system for better experience.\nRegards,\nAdmin Team\n---\nFrom: bookings@company.com\nTo: james@hospitality.com\nSubject: Re: System Update\n\nThank you for contacting us. We will follow up as needed.\nBest regards,\nCustomer Service Team",
+    "predicted_behavior": "New Information",
+    "suggested_action": "Update Records"
+  },
+  {
+    "thread_id": 86,
+    "sender": "sarah@client.com",
+    "email_text": "From: sarah@client.com\nTo: reservations@company.com\nSubject: Rate Updates\n\nWe have new information regarding your booking that may affect your stay.\nRegards,\nBooking Team\n---\nFrom: reservations@company.com\nTo: sarah@client.com\nSubject: Re: Rate Updates\n\nYour message has been logged and will be handled appropriately.\nBest regards,\nCustomer Service Team",
+    "predicted_behavior": "New Information",
+    "suggested_action": "Update Records"
+  },
+  {
+    "thread_id": 87,
+    "sender": "tom@vendor.com",
+    "email_text": "From: tom@vendor.com\nTo: manager@company.com\nSubject: Important Update\n\nUpdate: New safety protocols have been implemented across all locations.\nRegards,\nBooking Team\n---\nFrom: manager@company.com\nTo: tom@vendor.com\nSubject: Re: Important Update\n\nWe understand your concern and will address it promptly.\nBest regards,\nCustomer Service Team",
+    "predicted_behavior": "New Information",
+    "suggested_action": "Update Records"
+  },
+  {
+    "thread_id": 88,
+    "sender": "maria@hospitality.com",
+    "email_text": "From: maria@hospitality.com\nTo: sales@company.com\nSubject: System Update\n\nWe have new information about the venue change for your event.\nRegards,\nHotel Staff\n---\nFrom: sales@company.com\nTo: maria@hospitality.com\nSubject: Re: System Update\n\nYour request is being reviewed by our team.\nBest regards,\nCustomer Service Team",
+    "predicted_behavior": "New Information",
+    "suggested_action": "Update Records"
+  },
+  {
+    "thread_id": 89,
+    "sender": "sarah@solutions.com",
+    "email_text": "From: sarah@solutions.com\nTo: support@company.com\nSubject: Updated Requirements\n\nNew information: Additional services are now available at your location.\nRegards,\nSupport Team\n---\nFrom: support@company.com\nTo: sarah@solutions.com\nSubject: Re: Updated Requirements\n\nWe acknowledge receipt of your message and will respond shortly.\nBest regards,\nCustomer Service Team",
+    "predicted_behavior": "New Information",
+    "suggested_action": "Update Records"
+  },
+  {
+    "thread_id": 90,
+    "sender": "maria@resort.com",
+    "email_text": "From: maria@resort.com\nTo: help@company.com\nSubject: Rate Updates\n\nUpdate: New safety protocols have been implemented across all locations.\nRegards,\nSupport Team\n---\nFrom: help@company.com\nTo: maria@resort.com\nSubject: Re: Rate Updates\n\nYour request is being reviewed by our team.\nBest regards,\nCustomer Service Team",
+    "predicted_behavior": "New Information",
+    "suggested_action": "Update Records"
+  },
+  {
+    "thread_id": 91,
+    "sender": "anna@customer.com",
+    "email_text": "From: anna@customer.com\nTo: admin@company.com\nSubject: Rate Updates\n\nPlease note the updated policies that will take effect from next week.\nRegards,\nBooking Team\n---\nFrom: admin@company.com\nTo: anna@customer.com\nSubject: Re: Rate Updates\n\nYour request is being reviewed by our team.\nBest regards,\nCustomer Service Team",
+    "predicted_behavior": "New Information",
+    "suggested_action": "Update Records"
+  },
+  {
+    "thread_id": 92,
+    "sender": "david@hospitality.com",
+    "email_text": "From: david@hospitality.com\nTo: admin@company.com\nSubject: Schedule Changes\n\nImportant notice: Our system will undergo maintenance with new features.\nRegards,\nCustomer Service\n---\nFrom: admin@company.com\nTo: david@hospitality.com\nSubject: Re: Schedule Changes\n\nWe understand your concern and will address it promptly.\nBest regards,\nCustomer Service Team",
+    "predicted_behavior": "New Information",
+    "suggested_action": "Update Records"
+  },
+  {
+    "thread_id": 93,
+    "sender": "anna@supplier.com",
+    "email_text": "From: anna@supplier.com\nTo: support@company.com\nSubject: Service Modifications\n\nAdditional information: Your package now includes complimentary services.\nRegards,\nAdmin Team\n---\nFrom: support@company.com\nTo: anna@supplier.com\nSubject: Re: Service Modifications\n\nYour request is being reviewed by our team.\nBest regards,\nCustomer Service Team",
+    "predicted_behavior": "New Information",
+    "suggested_action": "Update Records"
+  },
+  {
+    "thread_id": 94,
+    "sender": "maria@enterprise.com",
+    "email_text": "From: maria@enterprise.com\nTo: support@company.com\nSubject: Rate Updates\n\nPlease note the updated policies that will take effect from next week.\nRegards,\nHotel Staff\n---\nFrom: support@company.com\nTo: maria@enterprise.com\nSubject: Re: Rate Updates\n\nYour request is being reviewed by our team.\nBest regards,\nCustomer Service Team",
+    "predicted_behavior": "New Information",
+    "suggested_action": "Update Records"
+  },
+  {
+    "thread_id": 95,
+    "sender": "james@events.com",
+    "email_text": "From: james@events.com\nTo: info@company.com\nSubject: Schedule Changes\n\nWe're excited to share new features that are now available for your account.\nRegards,\nBooking Team\n---\nFrom: info@company.com\nTo: james@events.com\nSubject: Re: Schedule Changes\n\nWe have received your communication and will process it accordingly.\nBest regards,\nCustomer Service Team",
+    "predicted_behavior": "Confirmation",
+    "suggested_action": "Close Ticket"
+  },
+  {
+    "thread_id": 96,
+    "sender": "maria@customer.com",
+    "email_text": "From: maria@customer.com\nTo: reservations@company.com\nSubject: Service Enhancement\n\nWe have new information about the venue change for your event.\nRegards,\nAdmin Team\n---\nFrom: reservations@company.com\nTo: maria@customer.com\nSubject: Re: Service Enhancement\n\nWe acknowledge receipt of your message and will respond shortly.\nBest regards,\nCustomer Service Team",
+    "predicted_behavior": "New Information",
+    "suggested_action": "Update Records"
+  },
+  {
+    "thread_id": 97,
+    "sender": "james@services.com",
+    "email_text": "From: james@services.com\nTo: bookings@company.com\nSubject: Process Change Notice\n\nNew information: Enhanced services are now available in your area.\nRegards,\nHotel Staff\n---\nFrom: bookings@company.com\nTo: james@services.com\nSubject: Re: Process Change Notice\n\nYour message has been logged and will be handled appropriately.\nBest regards,\nCustomer Service Team",
+    "predicted_behavior": "New Information",
+    "suggested_action": "Update Records"
+  },
+  {
+    "thread_id": 98,
+    "sender": "maria@company.com",
+    "email_text": "From: maria@company.com\nTo: admin@company.com\nSubject: Schedule Changes\n\nWe have updated our rates and terms. Please review the attached details.\nRegards,\nHotel Staff\n---\nFrom: admin@company.com\nTo: maria@company.com\nSubject: Re: Schedule Changes\n\nThank you for the update. We will take necessary action.\nBest regards,\nCustomer Service Team",
+    "predicted_behavior": "Confirmation",
+    "suggested_action": "Close Ticket"
+  },
+  {
+    "thread_id": 99,
+    "sender": "emma@services.com",
+    "email_text": "From: emma@services.com\nTo: reservations@company.com\nSubject: Updated Requirements\n\nWe have updated our rates and terms. Please review the attached details.\nRegards,\nSupport Team\n---\nFrom: reservations@company.com\nTo: emma@services.com\nSubject: Re: Updated Requirements\n\nWe acknowledge receipt of your message and will respond shortly.\nBest regards,\nCustomer Service Team",
+    "predicted_behavior": "New Information",
+    "suggested_action": "Update Records"
+  },
+  {
+    "thread_id": 100,
+    "sender": "emma@client.com",
+    "email_text": "From: emma@client.com\nTo: admin@company.com\nSubject: Process Change Notice\n\nWe're excited to share new features that are now available for your account.\nRegards,\nBooking Team\n---\nFrom: admin@company.com\nTo: emma@client.com\nSubject: Re: Process Change Notice\n\nThank you for the update. We will take necessary action.\nBest regards,\nCustomer Service Team",
+    "predicted_behavior": "Confirmation",
+    "suggested_action": "Close Ticket"
+  }
+]
