@@ -232,5 +232,122 @@
     "user_id": "somesh ",
     "timestamp": "2025-10-08T12:38:56.093718+00:00",
     "ai_confidence": 100
+  },
+  {
+    "thread_id": "199dc280adf79dc4",
+    "ai_suggestion": "Request Additional Information",
+    "final_action": "Request Additional Information",
+    "decision_status": "Approved",
+    "user_id": "orionbee13@gmail.com",
+    "timestamp": "2025-10-13T06:19:02.162223+00:00",
+    "ai_confidence": 85
+  },
+  {
+    "thread_id": "199dc280adf79dc4",
+    "ai_suggestion": "Request Additional Information",
+    "final_action": "Request Additional Information",
+    "decision_status": "Approved",
+    "user_id": "orionbee13@gmail.com",
+    "timestamp": "2025-10-13T06:19:03.628073+00:00",
+    "ai_confidence": 85
+  },
+  {
+    "thread_id": "199dc49e85b756ad",
+    "ai_suggestion": "Escalate to Manager",
+    "final_action": "Escalate to Manager",
+    "decision_status": "Approved",
+    "user_id": "somesh ",
+    "timestamp": "2025-10-13T06:40:38.557285+00:00",
+    "ai_confidence": 85
+  },
+  {
+    "thread_id": "199dc49e85b756ad",
+    "ai_suggestion": "Escalate to Manager",
+    "final_action": "Escalate to Manager",
+    "decision_status": "Approved",
+    "user_id": "somesh ",
+    "timestamp": "2025-10-13T06:55:31.161704+00:00",
+    "ai_confidence": 85
+  },
+  {
+    "thread_id": "199dbe75ff6c3146",
+    "ai_suggestion": "Review Manually",
+    "final_action": "Review Manually",
+    "decision_status": "Approved",
+    "user_id": "somesh",
+    "timestamp": "2025-10-13T06:59:36.421447+00:00",
+    "ai_confidence": 85
+  },
+  {
+    "thread_id": "199dbe75ff6c3146",
+    "ai_suggestion": "Review Manually",
+    "final_action": "Escalate to Manager",
+    "decision_status": "Overridden",
+    "user_id": "somesh",
+    "timestamp": "2025-10-13T06:59:45.158185+00:00",
+    "ai_confidence": 85
+  },
+  {
+    "thread_id": "199dc5f182edcb56",
+    "ai_suggestion": "Escalate to Manager",
+    "final_action": "Escalate to Manager",
+    "decision_status": "Approved",
+    "user_id": "somesh ",
+    "timestamp": "2025-10-13T07:03:13.857902+00:00",
+    "ai_confidence": 85
+  },
+  {
+    "thread_id": "199dc5f182edcb56",
+    "ai_suggestion": "Escalate to Manager",
+    "final_action": "Escalate to Manager",
+    "decision_status": "Approved",
+    "user_id": "somesh ",
+    "timestamp": "2025-10-13T07:04:12.834375+00:00",
+    "ai_confidence": 85
+  },
+  {
+    "thread_id": "199dc6d4e4d55383",
+    "ai_suggestion": "Escalate to Manager",
+    "final_action": "Close Ticket",
+    "decision_status": "Overridden",
+    "user_id": "somesh ",
+    "timestamp": "2025-10-13T07:17:54.383545+00:00",
+    "ai_confidence": 85
+  },
+  {
+    "thread_id": "199dc6d4e4d55383",
+    "ai_suggestion": "Escalate to Manager",
+    "final_action": "Request Additional Information",
+    "decision_status": "Overridden",
+    "user_id": "somesh ",
+    "timestamp": "2025-10-13T07:18:13.331087+00:00",
+    "ai_confidence": 85
+  },
+  {
+    "thread_id": "199dc6d4e4d55383",
+    "ai_suggestion": "Escalate to Manager",
+    "final_action": "Request Additional Information",
+    "decision_status": "Overridden",
+    "user_id": "somesh ",
+    "timestamp": "2025-10-13T07:18:26.494105+00:00",
+    "ai_confidence": 85
+  },
+  {
+    "thread_id": "199dc6d4e4d55383",
+    "ai_suggestion": "Escalate to Manager",
+    "final_action": "Escalate to Manager",
+    "decision_status": "Approved",
+    "user_id": "somesh ",
+    "timestamp": "2025-10-13T07:18:29.718836+00:00",
+    "ai_confidence": 85
+  },
+  {
+    "thread_id": "199dc6d4e4d55383",
+    "ai_suggestion": "Escalate to Manager",
+    "final_action": "Escalate to Manager",
+    "decision_status": "Overridden",
+    "user_id": "somesh ",
+    "timestamp": "2025-10-13T07:18:33.179611+00:00",
+    "ai_confidence": 85
   }
 ]

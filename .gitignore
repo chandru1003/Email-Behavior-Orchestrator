@@ -1,0 +1,19 @@
+# Python cache
+__pycache__/
+*.pyc
+
+# User-specific credentials and tokens (IMPORTANT)
+token.json
+credentials.json
+.env
+
+# Logs and generated data
+logs/
+predictions.json
+Data/
+
+# Trained model
+model/model.pkl
+
+# Streamlit configuration
+.streamlit/

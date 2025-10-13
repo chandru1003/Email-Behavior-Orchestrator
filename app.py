@@ -15,24 +15,71 @@ import os
 import joblib
 from datetime import datetime, timezone
 import plotly.express as px
+from gmail_service import get_gmail_service, get_unread_emails, get_email_content, create_and_send_reply, apply_label, archive_email
 
 # Set page config as the first Streamlit command
 st.set_page_config(page_title="Email Behavior Orchestrator", layout="wide")
 
-# --- Initialize session state for login and active tab ---
+# --- Initialize session state for login and active tab -- -
 if "logged_in" not in st.session_state:
     st.session_state.logged_in = False
 if "active_tab" not in st.session_state:
     st.session_state.active_tab = "📊 Dashboard"
+if "emails" not in st.session_state:
+    st.session_state.emails = []
+if "drafted_reply" not in st.session_state:
+    st.session_state.drafted_reply = None
+
+
+def fetch_and_process_emails(model):
+    """Fetches unread emails, classifies them, and stores them in the session state."""
+    print("--- Starting to fetch emails ---")
+    service = get_gmail_service()
+    if not service:
+        st.error("Could not connect to Gmail API.")
+        print("Error: Could not get Gmail service.")
+        return
+
+    print("Gmail service obtained. Fetching unread messages...")
+    unread_messages = get_unread_emails(service)
+    
+    print(f"API response for unread messages: {unread_messages}") # LOGGING
+
+    if not unread_messages:
+        st.info("No unread emails found.")
+        print("No unread messages returned from API.")
+        return
+
+    print(f"Found {len(unread_messages)} unread messages.") # LOGGING
+    new_emails = []
+    for msg in unread_messages:
+        print(f"Processing message ID: {msg['id']}") # LOGGING
+        email_data = get_email_content(service, msg['id'])
+        if email_data and model:
+            # Use the model to predict
+            prediction = model.predict([email_data['body']])[0]
+            
+            email_data['predicted_behavior'] = prediction
+            email_data['thread_id'] = msg['threadId']
+            email_data['email_text'] = email_data['body'] # for compatibility with existing UI
+            new_emails.append(email_data)
+            print(f"Successfully processed and classified message ID: {msg['id']}") # LOGGING
+        else:
+            print(f"Could not get content or model not available for message ID: {msg['id']}") # LOGGING
+
+
+    st.session_state.emails = new_emails
+    print(f"--- Finished fetching emails. Stored {len(new_emails)} emails in session state. ---")
+
 
 def run_orchestrator_app():
     """
     This function contains the entire original application logic.
     It is called only after a successful login.
     """
-    # ---------------------------
+    # -------------------------- -
     # CONFIG
-    # ---------------------------
+    # -------------------------- -
     PREDICTIONS_FILE = "predictions.json"
     MODEL_FILE = "model/model.pkl"
     DATA_FILE = "logs/decisions_log.json"
@@ -63,44 +110,81 @@ def run_orchestrator_app():
                 "Other": "No Action"
             }
 
-    # ---------------------------
+    # -------------------------- -
     # Init log file if missing
-    # ---------------------------
+    # -------------------------- -
     if not os.path.exists(DATA_FILE):
         with open(DATA_FILE, "w") as f:
             json.dump([], f)
 
-    # ---------------------------
+    # -------------------------- -
     # Load data sources
-    # ---------------------------
-    # @st.cache_data # Caching can interfere with live updates after saving, so we load fresh data on each run
+    # -------------------------- -
     def load_data():
-        if os.path.exists(PREDICTIONS_FILE):
-            with open(PREDICTIONS_FILE, "r") as f:
-                predictions = json.load(f)
-        else:
-            predictions = []
-
+        # We now primarily use session state for emails, but keep log loading
         with open(DATA_FILE, "r") as f:
             log = json.load(f)
-
-        return predictions, log
+        return st.session_state.emails, log
 
     predictions, log = load_data()
     rules = load_rules()
+
+    # -------------------------- -
+    # ACTION MAPPING
+    # -------------------------- -
+    # This dictionary maps action strings to functions.
+    # It now intelligently handles whether an action is immediate (like archiving) 
+    # or requires drafting an email for review.
+
+    def create_draft(recipient, subject, body, original_email_id):
+        """Helper function to place a draft into the session state for editing."""
+        st.session_state.drafted_reply = {
+            "recipient": recipient,
+            "subject": subject,
+            "body": body,
+            "original_email_id": original_email_id
+        }
+
+    action_map = {
+        # Immediate actions (no user editing needed)
+        "Close Ticket": lambda service, thread: archive_email(service, thread['id']),
+        "Assign to Agent": lambda service, thread: apply_label(service, thread['id'], "Assigned-Agent"), # TODO: Make sure this label exists in Gmail
+        "No Action": lambda service, thread: None, # Does nothing
+
+        # Email actions (will create a draft for editing)
+        "Escalate to Manager": lambda service, thread: create_draft(
+            recipient="manager@example.com", # <-- TODO: Change to your manager's email
+            subject=f"Escalated: {thread['subject']}",
+            body=thread['email_text'],
+            original_email_id=thread['id']
+        ),
+        "Request Additional Information": lambda service, thread: create_draft(
+            recipient=thread['from'],
+            subject=f"Re: {thread['subject']}",
+            body="Thank you for your email. Could you please provide more information regarding your request?", # <-- TODO: Customize this template
+            original_email_id=thread['id']
+        )
+    }
 
     if os.path.exists(MODEL_FILE):
         model = joblib.load(MODEL_FILE)
     else:
         model = None
+        st.error("Model file not found. Please make sure model.pkl is in the model/ directory.")
 
-    # ---------------------------
+
+    # -------------------------- -
     # Streamlit UI
-    # ---------------------------
+    # -------------------------- -
     st.title("📧 Email Behavior Orchestrator")
 
-    # ---- Sidebar for Rule Editing ----
+    # ---- Sidebar for Rule Editing and Gmail Actions ----
     with st.sidebar:
+        st.header("📧 Gmail Actions")
+        if st.button("Fetch New Emails"):
+            fetch_and_process_emails(model)
+            st.rerun()
+
         st.header("📝 Edit Rules")
         st.markdown("Define the default action for each detected behavior.")
         
@@ -112,12 +196,11 @@ def run_orchestrator_app():
             with open(RULES_FILE, "w") as f:
                 json.dump(new_rules, f, indent=2)
             st.success("Rules saved!")
-            # No need to clear cache or rerun, button press does it automatically
+            st.rerun()
 
     # ---- Main content with stateful navigation ----
     tab_names = ["📊 Dashboard", "📨 Inbox & Audit", "📈 Analytics"]
     
-    # Use st.radio for navigation and persist the choice in session_state
     st.session_state.active_tab = st.radio(
         "Navigation",
         options=tab_names,
@@ -126,9 +209,9 @@ def run_orchestrator_app():
         label_visibility="collapsed"
     )
 
-    ## ---------------------------
+    ## -------------------------- -
     ## Screen 1: Dashboard
-    ## ---------------------------
+    ## -------------------------- -
     if st.session_state.active_tab == "📊 Dashboard":
         st.header("Control Center & Performance Overview")
         st.markdown("Immediately understand the status of your campaigns and the value the system is providing.")
@@ -140,10 +223,9 @@ def run_orchestrator_app():
 
         st.markdown("##") # Adds vertical space
         
-        # --- Quick Stats ---
+        # --- Quick Stats -- -
         st.subheader("Quick Stats")
         
-        # Prepare data for stats
         total_replies = len(predictions)
         decisions_made = len(log)
         
@@ -171,20 +253,35 @@ def run_orchestrator_app():
         with col4:
             st.metric(label="Most Common Behavior", value=most_common_behavior)
 
-    ## ---------------------------
+    ## -------------------------- -
     ## Screen 2: Inbox & Audit
-    ## ---------------------------
+    ## -------------------------- -
     elif st.session_state.active_tab == "📨 Inbox & Audit":
         st.header("Inbox — Threads for Review")
 
         if predictions:
+            # --- Sorting Logic ---
+            all_behaviors = sorted(list(set(p["predicted_behavior"] for p in predictions)))
+            sort_options = ["Default"] + all_behaviors
+            
+            selected_sort = st.selectbox(
+                "Sort by Behavior",
+                options=sort_options,
+                key="sort_behavior_select"
+            )
+
+            sorted_predictions = predictions.copy()
+            if selected_sort != "Default":
+                # This brings emails with the selected behavior to the top of the list
+                sorted_predictions.sort(key=lambda p: p['predicted_behavior'] != selected_sort)
+
             df = pd.DataFrame([{
                 "Thread ID": p["thread_id"],
-                "Sender": p["sender"],
+                "Sender": p["from"],
                 "AI-Detected Behavior": p["predicted_behavior"],
                 "Suggested Action": rules.get(p["predicted_behavior"], "Review Manually"),
                 "Decision Status": "Pending"
-            } for p in predictions])
+            } for p in sorted_predictions])
             
             st.info("Click on a row in the table below to select a thread for audit.")
             
@@ -199,13 +296,14 @@ def run_orchestrator_app():
             selected_row_index = event.selection.rows[0] if event.selection.rows else 0
             selected_thread_id = df.iloc[selected_row_index]["Thread ID"]
             
-            p_selected = next(p for p in predictions if p["thread_id"] == selected_thread_id)
+            # Use the sorted list to find the selected email
+            p_selected = next(p for p in sorted_predictions if p["thread_id"] == selected_thread_id)
             thread = {
                 **p_selected,
                 "suggested_action": rules.get(p_selected["predicted_behavior"], "Review Manually")
             }
         else:
-            st.warning("No predictions found. Please run the classification pipeline first.")
+            st.warning("No emails found. Click 'Fetch New Emails' in the sidebar.")
             thread = None
 
         if thread:
@@ -227,31 +325,72 @@ def run_orchestrator_app():
             with col2:
                 st.subheader("Human-in-the-Loop Controls")
                 
+                # --- Unified Action Logic ---
+                action_to_perform = None
+                
                 if st.button("✅ Approve Suggested Action", key=f"approve_{thread['thread_id']}"):
+                    action_to_perform = thread["suggested_action"]
                     entry = {
                         "thread_id": thread["thread_id"], "ai_suggestion": thread["suggested_action"],
-                        "final_action": thread["suggested_action"], "decision_status": "Approved",
+                        "final_action": action_to_perform, "decision_status": "Approved",
                         "user_id": st.session_state.username, "timestamp": datetime.now(timezone.utc).isoformat(),
                         "ai_confidence": ai_conf
                     }
                     log.append(entry)
                     with open(DATA_FILE, "w") as f: json.dump(log, f, indent=2)
-                    st.success("Decision saved!")
-                    # No explicit rerun needed; button press handles it.
 
                 override_options = list(set(rules.values())) + ["No Action"]
                 override = st.selectbox("✏️ Override Action", options=override_options, key=f"override_select_{thread['thread_id']}")
                 if st.button("Save Override", key=f"override_btn_{thread['thread_id']}"):
+                    action_to_perform = override
                     entry = {
                         "thread_id": thread["thread_id"], "ai_suggestion": thread["suggested_action"],
-                        "final_action": override, "decision_status": "Overridden",
+                        "final_action": action_to_perform, "decision_status": "Overridden",
                         "user_id": st.session_state.username, "timestamp": datetime.now(timezone.utc).isoformat(),
                         "ai_confidence": ai_conf
                     }
                     log.append(entry)
                     with open(DATA_FILE, "w") as f: json.dump(log, f, indent=2)
-                    st.success("Override saved!")
-                    # No explicit rerun needed; button press handles it.
+
+                if action_to_perform:
+                    service = get_gmail_service()
+                    st.session_state.drafted_reply = None # Clear any previous draft
+
+                    if service and action_to_perform in action_map:
+                        # Execute the action from the map
+                        action_map[action_to_perform](service, thread)
+                        
+                        # If a draft was NOT created, it was an immediate action.
+                        if not st.session_state.drafted_reply:
+                            st.success(f"Action '{action_to_perform}' executed successfully!")
+                        else:
+                            st.success(f"Reply draft for '{action_to_perform}' created. You can edit it below.")
+                    
+                    elif action_to_perform not in action_map:
+                        st.warning(f"Action '{action_to_perform}' is not defined. Please configure it in app.py.")
+                    else:
+                        st.error("Could not connect to Gmail to perform the action.")
+                    
+                    st.rerun()
+
+            # --- Draft Reply Section ---
+            if st.session_state.drafted_reply and st.session_state.drafted_reply["original_email_id"] == thread["id"]:
+                st.markdown("---")
+                st.subheader("📝 Draft & Send Reply")
+                
+                draft = st.session_state.drafted_reply
+                edited_body = st.text_area("Edit Reply Body", value=draft["body"], height=200)
+                
+                if st.button("🚀 Send Reply"):
+                    service = get_gmail_service()
+                    if service:
+                        create_and_send_reply(service, draft["recipient"], draft["subject"], edited_body, draft["original_email_id"])
+                        st.success("Reply sent successfully!")
+                        # Clear the draft from session state
+                        st.session_state.drafted_reply = None
+                        st.rerun()
+                    else:
+                        st.error("Could not connect to Gmail to send reply.")
 
             st.markdown("---")
             st.subheader("📝 Audit Trail for This Thread")
@@ -265,9 +404,9 @@ def run_orchestrator_app():
             else:
                 st.info("No decisions have been logged for this thread yet.")
 
-    ## ---------------------------
+    ## -------------------------- -
     ## Screen 3: Analytics
-    ## ---------------------------
+    ## -------------------------- -
     elif st.session_state.active_tab == "📈 Analytics":
         st.header("📊 Analytics Dashboard")
 
