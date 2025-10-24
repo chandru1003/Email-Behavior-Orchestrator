@@ -349,5 +349,41 @@
     "user_id": "somesh ",
     "timestamp": "2025-10-13T07:18:33.179611+00:00",
     "ai_confidence": 85
+  },
+  {
+    "thread_id": "199dce60a6474475",
+    "ai_suggestion": "Close Ticket",
+    "final_action": "Close Ticket",
+    "decision_status": "Approved",
+    "user_id": "somesh",
+    "timestamp": "2025-10-13T09:30:32.964915+00:00",
+    "ai_confidence": 85
+  },
+  {
+    "thread_id": "199dce60a6474475",
+    "ai_suggestion": "Close Ticket",
+    "final_action": "Escalate to Manager",
+    "decision_status": "Overridden",
+    "user_id": "somesh",
+    "timestamp": "2025-10-13T09:30:40.083174+00:00",
+    "ai_confidence": 85
+  },
+  {
+    "thread_id": "199dd3e874357db7",
+    "ai_suggestion": "Escalate to Manager",
+    "final_action": "Escalate to Manager",
+    "decision_status": "Overridden",
+    "user_id": "somesh ",
+    "timestamp": "2025-10-13T11:07:43.823921+00:00",
+    "ai_confidence": 85
+  },
+  {
+    "thread_id": "199dd7ae1e48412d",
+    "ai_suggestion": "Close Ticket",
+    "final_action": "Request Additional Information",
+    "decision_status": "Overridden",
+    "user_id": "somesh ",
+    "timestamp": "2025-10-13T12:54:54.662405+00:00",
+    "ai_confidence": 88
   }
 ]

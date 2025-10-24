@@ -153,7 +153,7 @@ def run_orchestrator_app():
 
         # Email actions (will create a draft for editing)
         "Escalate to Manager": lambda service, thread: create_draft(
-            recipient="manager@example.com", # <-- TODO: Change to your manager's email
+            recipient="kj@kgrp.in", # <-- TODO: Change to your manager's email
             subject=f"Escalated: {thread['subject']}",
             body=thread['email_text'],
             original_email_id=thread['id']
